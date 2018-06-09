@@ -1,0 +1,112 @@
+<div class="divtable" id="triplist" ng-if="triplist">
+  <div class="divtablebody">
+
+    <div class="divtablerow triplistrow" ng-repeat="trip in triplist">
+
+      <div class="divtablecell userimage">
+        <img class="userimage" src="{{ 'static/media/images/userimage.png' }}">
+      </div>
+
+      <div class="divtablecell tripbody">
+        <div class="divtablecell tripbodyinner">
+          <div class="divtable">
+            <div class="divtablebody">
+
+<!-- row for card headers -->
+              <div class="divtablerow">
+                <div class="divtable">
+                  <div class="divtablebody">
+                    <div class="divtablerow">
+
+                      <div class="divtablecell tripheader">
+                        <div class="divtablerow">
+                          <div class="divtablecell username">
+                            Thribhuvan
+                          </div>
+                        </div>
+                        <div class="divtablerow">
+                          <div class="divtablecell datetime">
+                            {{ trip.createdon * 1000 | date:'dd MMM yyyy h a'}}
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!-- end row for card headers -->
+
+<!-- row for card body -->
+              <div class="divtablerow">
+                <div class="divtable">
+                  <div class="divtablebody">
+                    <div class="divtablerow">
+
+                      <div class="divtablecell fromsection">
+                        <div class="divtablerow">
+                          <div class="divtablecell fromto">
+                            From
+                          </div>
+                        </div>
+                        <div class="divtablerow">
+                          <div class="divtablecell fromblip location">
+                          <span class="location glyphicon glyphicon-map-marker"></span>
+                            {{ trip.fromlocation }}
+                          </div>
+                        </div>
+                        <div class="divtablerow">
+                          <div class="divtablecell datetime">
+                            {{ trip.leavingon * 1000 | date:'dd MMM yyyy h a'}}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="divtablecell viasection">
+                        <div class="divtablerow">
+                          <span class="gray glyphicon glyphicon-plane"></span>
+                        </div>
+                        <div class="divtablerow">
+                          <span class="gray glyphicon glyphicon-transfer"></span>
+                        </div>
+                        <div class="divtablerow">
+                          &nbsp;
+                        </div>
+                      </div>
+
+                      <div class="divtablecell tosection">
+                        <div class="divtablerow">
+                          <div class="divtablecell fromto">
+                            To
+                          </div>
+                        </div>
+                        <div class="divtablerow toblip location">
+                          <div class="divtablecell"><span class="glyphicon glyphicon-map-marker"></span>
+                            {{ trip.tolocation }}
+                          </div>
+                        </div>
+                        <div class="divtablerow">
+                          <div class="divtablecell datetime">
+                            {{ trip.reachingon * 1000 | date:'dd MMM yyyy h a'}}
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+<!-- end row for card body -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divtablecell tripedit">
+        <span class="gray glyphicon glyphicon-chevron-down"></span>
+      </div>
+
+    </div>
+  </div>
+</div>
