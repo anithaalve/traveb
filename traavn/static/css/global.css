@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'helvetica';
+  src: '../fonts/helveticaneue.ttf';
+}
+
+body {
+  background-color: #e6ecf0;
+  font-family: 'helvetica', sans-serif;
+}
+
+.navbar-default {
+  background-color: #fff;
+}
+
+.divtable{
+  display: table;
+  width: 100%;
+}
+
+.divtablerow {
+  display: table-row;
+}
+
+.divtableheading {
+  background-color: #EEE;
+  display: table-header-group;
+}
+
+.divtablecell, .divtablehead {
+  //border: 1px solid #999999;
+  display: table-cell;
+}
+
+.divtableheading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: bold;
+}
+
+.divtablefoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: bold;
+}
+
+.divtablebody {
+  display: table-row-group;
+}
+
+#maincontainer {
+  margin-top: 60px;
+  display: flex;
+}
+
+.navbar {
+  border-radius: 0px;
+}
+
+.userimage {
+  width: 48px;
+  border-radius: 50%;
+}
+
+#maincontainer #leftbar,#rightbar {
+  height: 700px;
+  width: 23%;
+  background: white;
+}
+
+#maincontainer #streamlet {
+  width: 50%;
+  margin: 0 10px;
+}
+
+#maincontainer {
+  position: relative;
+}
+
+#streamlet .triplistrow {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  display: block;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e6ecf0;
+  cursor: pointer;
+  padding: 9px 12px;
+}
+
+#streamlet .triplistrow .tripbody {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+}
+
+#streamlet .triplistrow .tripbodyinner {
+  width: 100%;
+  display: inline;
+}
+
+#streamlet .triplistrow .tripimage {
+  vertical-align: top;
+}
+
+#streamlet .triplistrow .tripheader {
+  padding-bottom: 10px;
+}
+
+#streamlet .triplistrow .tripedit {
+  vertical-align: top;
+}
+
+#streamlet .triplistrow .fromsection {
+  width: 200px;
+}
+
+#streamlet .triplistrow .viasection {
+  padding: 0 20px;
+}
+
+#streamlet .triplistrow .username {
+  font-weight: 600;
+}
+
+#streamlet .triplistrow .location {
+  text-transform: capitalize;
+}
+
+.datetime, .fromto {
+  color: #657786;
+  font-size: 12px;
+}
+
+.fromblip {
+  color: #00BFFF;
+}
+
+.toblip {
+  color: #F08080;
+}
+
+.gray {
+  color: #CCC;
+}
+
+#trippostform {
+  margin-bottom: 10px;
+  background-color: #FFF;
+}
+
+#trippostbody {
+  padding: 10px;
+  display: flex;
+}
+
+#trippostform .formlabel {
+  color: #1DA1F2;
+  padding: 10px 0;
+
+}
+
+#trippostform .addressfield {
+  padding: 0 10px 10px 0;
+}
+
+#trippostform #locations,#timing {
+  display: inline-flex;
+}
+
+#trippostform .dropdown-menu {
+  width: fit-content;
+  min-width: 54px;
+}
+
+#trippostform #transportingby span {
+  padding-right: 10px;
+  width: 24px;
+}
+
+#trippostform #transportingby a {
+  color: #657786;
+}
