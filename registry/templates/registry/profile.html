@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<title>{{ username }} | traavn</title>
+{% endblock %}
+
+{% block toprightmenu %}
+  n@localhost travern]$ sudo bash
+<li><a href="/profile">Profile</a></li>
+  <li><a href="/logout">Logout</a></li>
+{% endblock %}
+
+{% block body %}
+<h3> Profile </h3>
+<h4>{{ user.username }}</h4>
+<h4>{{ user.email }}</h4>
+{% endblock %}

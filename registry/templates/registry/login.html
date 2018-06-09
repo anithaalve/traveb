@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+  <title>Login | traavn</title>
+  <link rel="stylesheet" type="text/css" href="{% static '/registry/css/registry.css'%} ">
+{% endblock %}
+
+{% block body %}
+  <div id="logincontainer" class="container-fluid">
+    <h3> Login </h3>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p  }}
+      <button type="submit">Login</button>
+    </form>
+  </div>
+{% endblock %}
