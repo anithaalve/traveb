@@ -1,0 +1,11 @@
+/////////////////////////////////////////////////////////////////////
+// Using Angularjs(2.0.2)
+// All rights reserved @traavn 2018
+/////////////////////////////////////////////////////////////////////
+
+(function() {
+  angular.module('masterapp')
+  .service('notify', ['$scope', function($scope) {
+    console.log("notify");
+  }])
+})();

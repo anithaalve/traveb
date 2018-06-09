@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block header%}
+  <title>Traavn</title>
+  <meta charset="utf-8"/>
+{% endblock %}
+
+{% block toprightmenu %}
+  <li><a href="/logout">Logout</a></li>
+{% endblock %}
+
+{% block body%}
+
+  <div id="leftbar">
+    <!-- leftbar -->
+  </div>
+
+  <div id="streamlet" ng-app="masterapp">
+    <!-- streamlet -->
+
+    <form id="trippostform" method="post" ng-submit="trippost()" ng-controller="tripctrl">
+    <script src="//maps.googleapis.com/maps/api/js?types=(cities)&amp;sensor=false&amp;libraries=places"></script>
+    <script src="https://w3schools.in/demo/geocomplete/js/jquery.geocomplete.min.js"></script>
+    <script>
+    $(function () {
+      $(".geolocation").geocomplete({
+        details: ".geo-details",
+        detailsAttribute: "data-geo"
+        });
+    });
+    </script>
+
+      {% csrf_token %}
+      {% verbatim %}
+      <div class="divtable"">
+        <div class="divtablebody" id="trippostbody">
+          <div class="divtablerow">
+            <div class="divtablecell userimage">
+              <img class="userimage" src="{% static '/media/images/userimage.png' %}">
+            </div>
+            <div class="divtablecell postformbody form-group">
+              <div class="divatblecell formlabel">Where are you going?</div>
+              <div id="frominfo">
+                <div class="col-sm-8 addressfield">
+                  <input ng-model="tripdata.fromlocation" class="form-control input-sm-4
+                  geolocation" id="fromlocation" type="text" placeholder="From" required
+                   autocomplete="on" data-toggle="tooltip" title=value>
+                </div>
+                <div class="col-sm-8 addressfield">
+                  <div class='input-group date datetimepicker' id='leavingon'>
+                    <input type='text' class="form-control" required placeholder="Leaving on"/>
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div id="toinfo">
+                <div class="col-sm-8 addressfield">
+                  <input ng-model="tripdata.tolocation" class="form-control input-sm-4 geolocation"
+                  id="tolocation" type="text" placeholder="To" name=tolocation>
+                </div>
+                <div class="col-sm-8 addressfield">
+                  <div class='input-group date datetimepicker' id='reachingon'>
+                    <input type='text' class="form-control" required placeholder="Leaving on"/>
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div id="tripformbuttonbar">
+                <div class="col-sm addressfield">
+                  <div class="dropdown">
+                    <button class="form-control btn btn-default dropdown-toggle input-sm" type="button"
+                    data-toggle="dropdown">By
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" id="transportingby">
+                      <li><a href="#"><span class="fa fa-subway"></span>Train</a></li>
+                      <li><a href="#"><span class="fa fa-motorcycle"></span>Motorbike</a></li>
+                      <li><a href="#"><span class="fa fa-car"></span>Car</a></li>
+                      <li><a href="#"><span class="fa fa-bus"></span>Bus</a></li>
+                      <li><a href="#"><span class="fa fa-plane"></span>Plane</a></li>
+                      <li><a href="#"><span class="fa fa-ship"></span>Ship</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm addressfield">
+                  <input type="submit" id="trippostbtn" class="btn btn-success btn-sm" value="Post"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endverbatim %}
+    </form>
+
+    <div id="triplist">
+      <div ng-view>
+        <h3>loading</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="rightbar">
+    <!-- rightbar -->
+  </div>
+
+{% endblock %}

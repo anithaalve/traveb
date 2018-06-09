@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block header%}
+  <title>Traavn</title>
+  <meta charset="utf-8"/>
+{% endblock %}
+
+{% block toprightmenu %}
+  <li><a href="/logout">Logout</a></li>
+{% endblock %}
+
+{% block body%}
+
+  <div id="leftbar">
+    <!-- leftbar -->
+  </div>
+
+  <div id="streamlet">
+    <!-- streamlet -->
+
+    <div id="trippostform">
+      <div class="divtable"">
+        <div class="divtablebody" id="trippostbody">
+          <div class="divtablerow">
+            <div class="divtablecell userimage">
+              <img class="userimage" src="{% static '/media/images/userimage.png' %}">
+            </div>
+            <div class="divtablecell postformbody form-group">
+              <div class="divatblecell formlabel">Where are you going?</div>
+              <div id="locations">
+                <div class="col-sm-8 addressfield">
+                  <input class="form-control input-sm-4" id="fromlocation" type="text" placeholder="From">
+                </div>
+                <div class="col-sm-8 addressfield">
+                  <input class="form-control input-sm-4" id="tolocation" type="text" placeholder="To">
+                </div>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle input-sm" type="button"
+                  data-toggle="dropdown">By
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu" id="transportingby">
+                    <li><a href="#"><span class="fa fa-subway"></span>Train</a></li>
+                    <li><a href="#"><span class="fa fa-motorcycle"></span>Motorbike</a></li>
+                    <li><a href="#"><span class="fa fa-car"></span>Car</a></li>
+                    <li><a href="#"><span class="fa fa-bus"></span>Bus</a></li>
+                    <li><a href="#"><span class="fa fa-plane"></span>Plane</a></li>
+                    <li><a href="#"><span class="fa fa-ship"></span>Ship</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div id="timing">
+                <div class="col-sm addressfield">
+                  <input class="form-control input-sm-2" id="leavingon" type="text" placeholder="Leaving on">
+                </div>
+                <div class="col-sm addressfield">
+                  <input class="form-control input-sm-2" id="reachingon" type="text" placeholder="Reaching on">
+                </div>
+              </div>
+              <p><input type="submit" id="postbtn" class="btn btn-success" value="Post"/></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="triplist">
+    </div>
+
+  </div>
+
+  <div id="rightbar">
+    <!-- rightbar -->
+  </div>
+
+{% endblock %}
