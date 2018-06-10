@@ -7,6 +7,7 @@ A progress web app to connect distant travelers and local business to provide/se
 2. Django 1.1
 3. Python 3.6
 4. Angular 5
+5. MySQL (Mariadb)
 
 ```markdown
 Setting up the environment
@@ -23,20 +24,12 @@ $sh setup-django.sh
 # Installing installing node.js and then Angular 5
 $sh install-nodejs.sh
 
-1. Numbered
-2. List
+# Installing MySQL(mariadb) and load the database schema from the repo
+$yum install mariadb mariadb-server
+$mysql_secure_installation
+$mysql -u(username) -p(password) < traavn.sql
 
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/3bhu1git/traveb/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
