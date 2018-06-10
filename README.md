@@ -1,4 +1,4 @@
-## Traveb
+# Traveb
 
 A progress web app to connect distant travelers and local business to provide/seek service as exchange.
 
@@ -41,4 +41,4 @@ $`sh install-nodejs.sh`
 $`npm install -g @angular/cli`
 
 ```
-# Done Application is ready
+## Done Application is ready
