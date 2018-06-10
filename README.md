@@ -2,9 +2,11 @@
 
 A progress web app to connect distant travelers and local business to provide/seek service as exchange.
 
-### 
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Prerequisites
+1. Virtuslenv running on fedora(centos 7) preffered
+2. Django 1.1
+3. Python 3.6
+4. Angular 5
 
 ```markdown
 Syntax highlighted code block
