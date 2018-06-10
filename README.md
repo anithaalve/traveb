@@ -40,4 +40,5 @@ $`sh install-nodejs.sh`
 # Installing Angular/cli
 $`npm install -g @angular/cli`
 
+```
 # Done Application is ready
