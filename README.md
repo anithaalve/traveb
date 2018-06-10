@@ -9,14 +9,19 @@ A progress web app to connect distant travelers and local business to provide/se
 4. Angular 5
 
 ```markdown
-Syntax highlighted code block
+Setting up the environment
 
-# Header 1
-## Header 2
-### Header 3
+# 1.Installing Virtual Environment (optional)
+$sh setupenv.sh
 
-- Bulleted
-- List
+# 2.Installing Python3.6 and pip
+$sh python-install.sh
+
+# Installing Django framework
+$sh setup-django.sh
+
+# Installing installing node.js and then Angular 5
+$sh install-nodejs.sh
 
 1. Numbered
 2. List
