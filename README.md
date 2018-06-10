@@ -3,7 +3,7 @@
 A progress web app to connect distant travelers and local business to provide/seek service as exchange.
 
 ### Prerequisites
-1. Virtuslenv running on fedora(centos 7) preferred
+1. Virtualenv running on fedora(centos 7) preferred
 2. Django 1.1
 3. Python 3.6
 4. Angular 5
