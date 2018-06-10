@@ -10,8 +10,8 @@ A progress web app to connect distant travelers and local business to provide/se
 5. MySQL (Mariadb)
 
 ```markdown
-Setting up the environment
-
+**Setting up the environment**
+**__Server__**
 # 1.Installing Virtual Environment (optional)
 $sh setupenv.sh
 
@@ -28,6 +28,10 @@ $sh install-nodejs.sh
 $yum install mariadb mariadb-server
 $mysql_secure_installation
 $mysql -u(username) -p(password) < traavn.sql
+
+# Setting up mysql to django models(assuming you have knowledge on dhango manage functionalities)
+$python manage.py makemigration
+$python manage.py migrate
 
 **Bold** and _Italic_ and `Code` text
 
