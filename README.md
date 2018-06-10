@@ -1,6 +1,6 @@
 # Traveb
 
-A progress web app to connect distant travelers and local business to provide/seek service as exchange.
+A progressive web app to connect distant travelers and local business to provide/seek service as exchange.
 
 ### Prerequisites
 1. Virtualenv running on fedora(centos 7) preferred
