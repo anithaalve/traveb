@@ -11,7 +11,9 @@ A progress web app to connect distant travelers and local business to provide/se
 
 ```markdown
 **Setting up the environment**
-**__Server__**
+
+***Server***
+
 # 1.Installing Virtual Environment (optional)
 $sh setupenv.sh
 
